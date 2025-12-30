@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a1a">
+
+    <!-- 1. Le Navigateur Web (Arrière-plan) -->
+    <WebView
+        android:id="@+id/myWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <!-- 2. L'écran de chargement (Superposition) -->
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo Application"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connexion au serveur..."
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Application réalisée par un fan (non officiel)"
+            android:textSize="12sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="8dp"
+            android:textStyle="italic" />
+            
+    </LinearLayout>
+
+    <!-- 3. Bouton Admin Flottant (Caché par défaut) -->
+    <ImageButton
+        android:id="@+id/btnAdmin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent" 
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:visibility="gone" 
+        android:elevation="10dp"
+        android:contentDescription="Menu Admin" />
+
+</RelativeLayout>
