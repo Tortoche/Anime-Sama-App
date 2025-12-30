@@ -25,7 +25,7 @@ C'est une APK (application Android), donc ça ne s'installe pas via le Play Stor
 Si tu veux voir comment c'est fait ou proposer des améliorations, le code est ouvert \! C'est codé en **Java** avec Android Studio.  
 Le cœur du système repose sur une WebView optimisée qui injecte un peu de JavaScript pour gérer la navigation et le localStorage (la mémoire du navigateur) de manière persistante.  
 Pour compiler le projet chez toi :  
-git clone \[https://github.com/Tortoche/Anime-Sama-App.git\](https://github.com/Tortoche/Anime-Sama-App.git)
+git clone https://github.com/Tortoche/Anime-Sama-App.git
 
 *(Besoin d'Android Studio et du JDK 17\)*
 
