@@ -1,36 +1,62 @@
-# **Anime-Sama App (Version Fan) 🍿**
+# **Anime-Sama App (Version Fan)**
 
-Salut l'équipe \! 👋  
-J'ai créé cette petite application Android parce que, comme vous, j'adore **Anime-Sama**, mais j'en avais marre de devoir chercher le nouveau lien à chaque fois que l'adresse changeait, ou de me battre avec les navigateurs sur mobile.  
-Le but est simple : avoir une expérience **100% dédiée**, propre et sans prise de tête pour regarder nos animés préférés.
+Bienvenue sur le dépôt de l'application Android non officielle pour **Anime-Sama**. Ce projet a été développé pour offrir une expérience de visionnage optimisée, fluide et persistante sur mobile, en palliant les contraintes habituelles des navigateurs web.
 
-## **🚀 Pourquoi utiliser cette appli ?**
+## **🚀 Fonctionnalités Principales**
 
-* **📍 Toujours la bonne adresse** : Plus besoin de chercher sur Discord ou Google. L'appli utilise le site "boussole" (anime-sama.pw) pour te rediriger automatiquement vers le site qui marche. Si l'URL change, l'appli le sait déjà.  
-* **🎬 Mode Cinéma (Immersif)** : L'appli cache la barre d'état (heure, batterie) et les boutons de navigation pour que tu profites de ton épisode en plein écran total. Un petit glissement de doigt, et ils réapparaissent si besoin.  
-* **💾 Sauvegarde de tes données** : C'est le gros point fort. Si le site change de domaine (passe de .tv à .fr par exemple), normalement tu perds ton historique. **Ici, non \!** L'appli sauvegarde ta progression dans ton téléphone et la réinjecte automatiquement si le site change. Tu ne perds plus ta liste d'épisodes vus.  
-* **🕵️‍♂️ Menu Caché** : J'ai ajouté un petit bouton secret (le logo de l'app) qui n'apparaît que sur la page **Profil**. Il permet de gérer tes données (exporter/importer) si jamais tu changes de téléphone.
+### **🛡️ Bloqueur de Publicités Intégré**
 
-## **📲 Comment l'installer ?**
+L'application intègre désormais un système de filtrage avancé pour garantir une navigation sereine :
 
-C'est une APK (application Android), donc ça ne s'installe pas via le Play Store pour l'instant.
+* **Interception des Popups :** Blocage automatique des nouvelles fenêtres et onglets indésirables souvent déclenchés par les lecteurs vidéo.  
+* **Filtrage des URL :** Restriction de la navigation aux domaines légitimes (Anime-Sama et hébergeurs vidéo reconnus) pour éviter les redirections malveillantes.  
+* **Nettoyage Visuel :** Suppression des bannières et éléments intrusifs via injection CSS/JS.
 
-1. Va dans la section **Releases** (à droite sur cette page GitHub) et télécharge le fichier .apk le plus récent.  
-2. Lance le fichier sur ton téléphone.  
-3. Si ton téléphone te dit que c'est une "Source inconnue" (c'est normal, je ne suis pas une multinationale \!), autorise l'installation.  
-4. C'est tout \! Bon visionnage.
+### **📍 Redirection Intelligente**
 
-## **🛠️ Pour les curieux (Devs)**
+L'application utilise le domaine "boussole" (anime-sama.pw) pour détecter et rediriger automatiquement l'utilisateur vers l'adresse fonctionnelle du site. Cela assure une continuité de service même en cas de changement de nom de domaine.
 
-Si tu veux voir comment c'est fait ou proposer des améliorations, le code est ouvert \! C'est codé en **Java** avec Android Studio.  
-Le cœur du système repose sur une WebView optimisée qui injecte un peu de JavaScript pour gérer la navigation et le localStorage (la mémoire du navigateur) de manière persistante.  
-Pour compiler le projet chez toi :  
-git clone https://github.com/Tortoche/Anime-Sama-App.git
+### **💾 Persistance des Données (Cross-Domain)**
 
-*(Besoin d'Android Studio et du JDK 17\)*
+Contrairement à un navigateur classique, cette application sauvegarde votre progression (historique, épisodes vus) localement dans le stockage sécurisé du téléphone.
 
-## **⚠️ Disclaimer**
+* **Synchronisation Auto :** Si le site change d'adresse (ex: passage de .tv à .fr), vos données sont automatiquement réinjectées.  
+* **Export/Import PC :** Vous pouvez exporter vos données au format JSON compatible avec la version PC pour une transition fluide entre vos appareils.
 
-Je précise que je suis un simple développeur fan du site. **Cette application n'est pas officielle.** Elle a été faite sur mon temps libre pour la communauté.  
-Je n'héberge aucun contenu, je ne suis pas responsable des vidéos, et l'application ne fait que naviguer sur le site public d'Anime-Sama. Si vous aimez le site, continuez à les soutenir \!  
-Profitez bien \! ✌️
+### **🎨 Interface "Immersive"**
+
+* **Mode Cinéma :** Masquage automatique des barres système (statut, navigation) pour un visionnage plein écran.  
+* **Design Unifié :** Les menus et interfaces de l'application reprennent l'identité visuelle du site (thème sombre, accents cyan/bleu nuit) pour une expérience cohérente.
+
+## **📲 Installation**
+
+Cette application n'est pas disponible sur le Google Play Store. Pour l'installer :
+
+1. Rendez-vous dans la section [**Releases**](https://www.google.com/search?q=https://github.com/Tortoche/Anime-Sama-App/releases) de ce dépôt.  
+2. Téléchargez le fichier .apk de la dernière version.  
+3. Ouvrez le fichier sur votre appareil Android.  
+4. Autorisez l'installation d'applications provenant de "Sources inconnues" si demandé.
+
+## **🛠️ Informations Techniques**
+
+Le projet est développé en **Java** sous Android Studio. Il repose sur une WebView hautement configurée :
+
+* **Moteur :** WebView Android avec WebChromeClient personnalisé.  
+* **Injection JS :** Utilisation de evaluateJavascript pour la gestion du localStorage et le blocage d'éléments DOM.  
+* **Gestion Vidéo :** Implémentation de onShowCustomView pour le support natif du plein écran des lecteurs HTML5.
+
+### **Compilation**
+
+Pour cloner et compiler le projet vous-même :  
+git clone \[https://github.com/Tortoche/Anime-Sama-App.git\](https://github.com/Tortoche/Anime-Sama-App.git)
+
+*Prérequis : Android Studio, JDK 17\.*
+
+## **⚠️ Avertissement Légal**
+
+Ce projet est une **initiative personnelle à but non lucratif**. Je ne suis pas affilié à l'équipe d'Anime-Sama.
+
+* L'application agit comme un navigateur spécialisé et n'héberge aucun contenu vidéo.  
+* L'utilisation de cette application est sous votre entière responsabilité.
+
+*Développé avec passion pour la communauté.*
