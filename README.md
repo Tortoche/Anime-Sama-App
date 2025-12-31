@@ -48,7 +48,7 @@ Le projet est développé en **Java** sous Android Studio. Il repose sur une Web
 ### **Compilation**
 
 Pour cloner et compiler le projet vous-même :  
-git clone \[https://github.com/Tortoche/Anime-Sama-App.git\](https://github.com/Tortoche/Anime-Sama-App.git)
+git clone https://github.com/Tortoche/Anime-Sama-App.git
 
 *Prérequis : Android Studio, JDK 17\.*
 
