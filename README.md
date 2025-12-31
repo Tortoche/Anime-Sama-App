@@ -32,7 +32,7 @@ Contrairement à un navigateur classique, cette application sauvegarde votre pro
 
 Cette application n'est pas disponible sur le Google Play Store. Pour l'installer :
 
-1. Rendez-vous dans la section [**Releases**](https://www.google.com/search?q=https://github.com/Tortoche/Anime-Sama-App/releases) de ce dépôt.  
+1. Rendez-vous dans la section [**Releases**](https://github.com/Tortoche/Anime-Sama-App/releases) de ce dépôt.  
 2. Téléchargez le fichier .apk de la dernière version.  
 3. Ouvrez le fichier sur votre appareil Android.  
 4. Autorisez l'installation d'applications provenant de "Sources inconnues" si demandé.
